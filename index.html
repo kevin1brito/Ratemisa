@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Search with Scroll</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./logo.png" />
+
+    <!-- Archivo CSS externo -->
+  </head>
+  <body>
+    <!-- Background image -->
+    <div class="background"></div>
+    <div class="first-section">
+      <div class="background"></div>
+
+      <!-- Nueva sección para el título, logo y descripción -->
+      <div class="header-container">
+        <div class="header">
+          <img src="./logo.png" alt="Project Logo" class="logo" />
+          <h1 class="title">Space Lab Navigator</h1>
+          <!-- Título del proyecto -->
+        </div>
+        <p class="description">
+          Information about NASA experiments conducted in space can be difficult
+          to find and understand. This search engine simplifies access to that
+          information in the form of diagrams. Simply search for the project you
+          want to explore, and the artificial intelligence will provide you with
+          the most relevant data and visualizations, ensuring that you don't
+          miss any details.
+        </p>
+        <!-- Descripción -->
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search the experiment ID or keyword..."
+            />
+            <button class="search-button">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2048px-Magnifying_glass_icon.svg.png"
+                alt="Search"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-section" id="secondSection">
+      <div class="container" id="secondContainer">
+        <div class="container" style="padding-top: 150px">
+          <pre id="results"></pre>
+          <div style="max-width: 200px">
+            <p class="description-second">
+              The process starts when a user enters a search term into an input
+              field. The system processes this query and searches NASA’s
+              database to find experiments related to the user's input. This is
+              the ouput of the "raw" data NASA's endpoint returns.
+            </p>
+          </div>
+          <svg width="500" height="500">
+            <!-- Línea de la flecha -->
+            <line
+              x1="20"
+              y1="150"
+              x2="400"
+              y2="25"
+              style="stroke: #2989c7; stroke-width: 5"
+            />
+          </svg>
+        </div>
+        <img
+          style="margin-top: 100px"
+          src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+          height="150px"
+          width="150px"
+        />
+
+        <div style="width: 100%">
+          <p
+            class="description-second"
+            style="max-width: 400px; margin-left: 10px"
+          >
+            After retrieving the initial data, an AI model powered by Hugging
+            Face analyzes the results to extract deeper insights. For instance,
+            upon searching for the experiment OSD-665, the model identifies its
+            relevance to rats and discovers connections to other experiments,
+            such as OSD-379. This enrichment process allows the system to
+            provide users with a more comprehensive understanding of related
+            studies and experimental contexts.
+          </p>
+
+          <svg width="200" height="200">
+            <!-- Línea de la flecha -->
+            <line
+              x1="100"
+              y1="10"
+              x2="100"
+              y2="180"
+              style="stroke: #2989c7; stroke-width: 5"
+            />
+          </svg>
+          <p
+            class="description-second"
+            style="max-width: 400px; margin-left: 10px"
+          >
+            Finally, step 1 concludes when another AI process gathers all the
+            data and begins to retrieve the most important information,
+            generating an output in JSON format. This output will be utilized by
+            the presentation layer to create diagrams.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="thrid-section" id="thrid-section">
+      <div class="container" style="padding-top: 150px">
+        <p
+          class="description-second"
+          style="max-width: 400px; margin-left: 10px"
+        >
+          With the output from the AI, the frontend begins to generate a tree
+          diagram to visually represent the data. This tree diagram contains
+          numerous other diagrams at its leaves, providing comprehensive visual
+          representations of the data being obtained, including detailed
+          relationships between experiments, the methodologies employed, and the
+          observed behavioral outcomes.
+        </p>
+
+        <img style="padding: 50px" src="./graph.jpeg" />
+      </div>
+    </div>
+
+    <div class="four-section" id="thrid-section">
+      <div style="padding-top: 20px; padding-left: 20px">
+        <h2>References:</h2>
+        <ul class="reference-list">
+          <li>
+            <a href="https://images.nasa.gov/">images.nasa.gov</a>
+          </li>
+          <li>Images generated by ChatGPT</li>
+          <li>IA: <a href="https://huggingface.co/"></a>huggingface.co</li>
+          <li>
+            NASA API:
+            <a href="https://www.nasa.gov/reference/osdr-public-ap"
+              >www.nasa.gov/reference/osdr-public-ap</a
+            >
+          </li>
+          <li>
+            NASA Studies:
+            <a href="https://osdr.nasa.gov/bio/repo/data/studies"
+              >osdr.nasa.gov/bio/repo/data/studie</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

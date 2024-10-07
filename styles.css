@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Kanit', sans-serif;
+  scroll-behavior: smooth; /* Efecto de desplazamiento suave */
+}
+
+/* Imagen de fondo */
+.background {
+  background-image: url('https://www.nasa.gov/wp-content/themes/nasa/assets/images/404-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.5); /* Oscurece el fondo */
+}
+
+/* Ajustar la posición del contenedor de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea la búsqueda al inicio del contenedor */
+  margin-top: 40px; /* Añadir espacio entre el buscador y la descripción */
+}
+
+/* Ajuste responsivo de la caja de búsqueda */
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  padding: 0 20px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Texto de placeholder */
+input[type='text']::placeholder {
+  color: #999;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Botón de búsqueda falso */
+.search-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.first-section {
+  height: 100vh; /* La primera sección ocupará el 100% de la altura de la ventana */
+  position: relative; /* Para posicionar el contenido dentro */
+}
+
+.search-button:hover {
+  background-color: #f0f0f0;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Segunda sección con imagen de fondo */
+.second-section {
+  height: 100vh;
+  background-image: url('https://images-assets.nasa.gov/image/PIA22081/PIA22081~orig.jpg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+/* Contenedor para el título y el logo */
+.header-container {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Color del texto en blanco */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espacio entre el logo y el título */
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 20%;
+  height: 20%;
+}
+
+.description {
+  font-size: 24px;
+  margin-top: 10px;
+  color: #ddd; /* Un tono más claro para la descripción */
+}
+
+.description-second {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ddd; /* Un tono más claro para la descripción */
+}
+
+/* Diagrama superpuesto */
+.diagram {
+  margin-right: 20px; /* Espacio entre el diagrama y el bloque de código */
+  width: 300px;
+}
+
+.diagram img {
+  max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para el bloque de código en la segunda sección */
+pre {
+  background-color: #1e1e1e; /* Fondo oscuro para el bloque de código */
+  color: #dcdcdc; /* Color claro para el texto del código */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  max-height: 500px; /* Altura máxima para el bloque */
+  min-height: 500px;
+  overflow-y: auto; /* Scroll vertical si el contenido es demasiado largo */
+  white-space: pre-wrap; /* Mantiene los saltos de línea del JSON */
+  font-family: monospace;
+  width: 500px; /* Ancho para que se ajuste al lado del diagrama */
+}
+
+/* Ajustes para el contenedor de la segunda sección */
+.container {
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  justify-content: start; /* Centra horizontalmente */
+  height: 100%; /* Altura completa */
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.thrid-section {
+  height: 100vh;
+  background-image: url('https://images-assets.nasa.gov/image/hubble-observes-one-of-a-kind-star-nicknamed-nasty_17754652960_o/hubble-observes-one-of-a-kind-star-nicknamed-nasty_17754652960_o~orig.jpg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+ul {
+  list-style-type: square; /* Cambia los puntos a cuadrados */
+  padding-left: 40px; /* Añade un poco de espacio a la izquierda */
+  font-size: 28px;
+  color: #ddd;
+}
+
+h2 {
+  color: #ddd;
+  font-size: 52px;
+}
+
+ol {
+  color: blue; /* Cambia el color de los números a azul */
+}
+
+.four-section {
+  height: 100vh;
+  background-image: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000211/GSFC_20171208_Archive_e000211~orig.jpg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
